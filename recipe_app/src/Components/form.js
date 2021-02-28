@@ -14,4 +14,4 @@ const Form = () => {
     );
 } 
 
-export default For
+export default Form
