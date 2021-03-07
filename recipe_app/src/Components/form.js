@@ -1,17 +1,28 @@
 import React from 'react';
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
-const Form = () => {
+const RecipeForm = () => {
 
     return (
-        <div className="form-container">
-            <label>Recipe Name</label>
-            <input type='text'></input>
-            <label>Ingredients List</label>
-            <input type='text'></input>
-            <label>Instructions:</label>
-            <input type='text'></input>
-        </div>
+        <Form>
+            <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Label>Recipe Name</Form.Label><br></br>
+                <Form.Control type="text" placeholder="Banana bread"/>
+            </Form.Group>
+            <Form.Group>
+                <Form.Label>Ingredients List</Form.Label><br></br>
+                <Form.Control type="text" placeholder="Recipe Name" />
+            </Form.Group>
+            <Form.Group>
+                <Form.Label>Instructions:</Form.Label><br></br>
+                <Form.Control as="textarea" rows={25} />    
+            </Form.Group>
+            
+            
+            
+        </Form>
     );
 } 
 
-export default Form
+export default RecipeForm
