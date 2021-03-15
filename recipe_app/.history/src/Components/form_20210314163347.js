@@ -1,6 +1,6 @@
 import React from 'react';
-import Ingredient from './Ingredient';
-import {Form, Button, ListGroup, Card} from 'react-bootstrap';
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 const RecipeForm = ({inputText,setInputText, 
                      ingredients, setIngredients,
@@ -11,8 +11,7 @@ const inputTextHandler = (e) => {
 }
 
 const addIngredientHandler = () => {
-    setIngredients([...ingredients, inputText])
-    
+    setIngredients(inputText)
 }
 
 
@@ -25,14 +24,8 @@ const addIngredientHandler = () => {
             <Form.Group>
                 <Form.Control type="text" placeholder="Ingredient" value={inputText} onChange={inputTextHandler}/>
                 <Button primary lg onClick={addIngredientHandler}>+</Button>
-                <Card style={{ width: '18rem' }}>
-                    <Card.Header>List of Ingredients</Card.Header>
-                    <ListGroup variant="flush">
-                        {ingredients.map(ingredient => 
-                            <Ingredient ingredient={ingredient}/>    
-                        )}
-                    </ListGroup>
-                </Card>
+                <Ingredient/>
+                
             </Form.Group>
             <Form.Group>
                 <Form.Label>Instructions:</Form.Label><br></br>

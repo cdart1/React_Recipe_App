@@ -33,6 +33,8 @@ const addIngredientHandler = () => {
                         )}
                     </ListGroup>
                 </Card>
+                <Ingredient ingredient="something" />
+                
             </Form.Group>
             <Form.Group>
                 <Form.Label>Instructions:</Form.Label><br></br>
